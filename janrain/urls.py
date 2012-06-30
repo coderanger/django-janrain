@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('janrain.views',
-    (r'^login/$', 'login'),
-    (r'^logout/$', 'logout'),
-    (r'^loginpage/$', 'loginpage'),
+    url(r'^login/$', 'login', name='janrain-login'),
+    url(r'^logout/$', 'logout', name='janrain-logout'),
+    url(r'^loginpage/$', 'loginpage', name='janrain-loginpage'),
 )
