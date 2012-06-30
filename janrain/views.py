@@ -36,8 +36,8 @@ def login(request):
                 username=p.get('preferredUsername'),
                 provider=p.get('providerName').lower(),
                 identifier=p.get('identifier'),
-                avatar=p.get('photo'),
-                url=p.get('url'),
+                avatar=p.get('photo', ''),
+                url=p.get('url', ''),
             )[0]
     juser.save()
     post_janrain_user.send(JanrainSignal, janrain_user=juser, profile_data=profile)
